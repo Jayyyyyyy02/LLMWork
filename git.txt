@@ -3,7 +3,7 @@ git add .
 git commit -m "first commit"
 git branch -M main
 git branch
-fit remote add origin https://github.com/Jayyyyyyy02/LLMWork.git
+git remote add origin https://github.com/Jayyyyyyy02/LLMWork.git
 git push -u origin main
 
 git pull
