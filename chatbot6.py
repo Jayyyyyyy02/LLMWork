@@ -15,7 +15,7 @@ from langchain_community.chat_message_histories import ChatMessageHistory
 load_dotenv()
 
 # 1. 스트림릿 기본 설정
-st.header("❤️세션별 멀티턴 챗봇❤️")
+st.header("세션별 멀티턴 챗봇")
 st.subheader("RunnableWithMessageHistory + ChatPromptTemplate")
 
 if "store" not in st.session_state:
