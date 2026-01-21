@@ -1,0 +1,36 @@
+1. basic.py
+2. baxi2.py
+3. langchain_basic.py : 랭체인 사용/PromptTemplate 사용
+4. langchain2.py : 랭체인 사용 ChatPromptTemplate
+5. langchain3.py : 실습. Few-shot Learning - 예시를 여러개 주어 질문해보자
+                랭체인 사용/ChatPromptTemplate
+6. single.py : 랭체인 사용해서 싱글턴 대화를 해보자
+7. multi.py : 랭체인 사용해서 멀티턴 대화를 해보자
+            (list를 이용해서 대화 히스토리 저장 => low level)
+8. memory1.py : ConversationBufferMemory를 이용한 멀티턴 예제 => 대화내용 전체 저장
+9. memory2.py : ConversationBufferWindowMemory를 이용한 멀티턴 예제 => 최근 대화 N개만 저장
+10. memory3.py : ConversationSummaryMemory를 이용한 멀티턴 예제 => 이전 대화를 LLM이 요약해서 저장
+---------------------
+11. chatbot.py : 스트림릿 이용한 챗봇 기본 예제
+12. streamlitUI.py : 스트림릿 레이아웃/위젯으로 UI 구성해보기
+13. chatbot2.py : form을 이용한 전송방식으로 챗봇 구현
+14. chatbot3.py : 웹앱 실행중 상태 유지 기법 사용하기
+15. chatbot4.py : AI모델과 연결한 챗봇(싱글턴)
+16. chatbot5.py : 멀티턴 챗봇 구현(PromptTemplate + Memory + streamlitUI)
+17. chatbot6.py :  UI 구성 대화 메시지 화면에 출력
+18. appTool.py : 현재시간을 알려주는 tool을 llmㅔ 바인딩하여 llm이 실시간 시간
+정보를 답변하도록 하자
+19. appTool2.py : tool 여러 개르 llm에 바인딩하느 예제
+                        (현재시각/간단한 계산기/주식 시세 정도를 알려주는 툴)
+20. tavily_search.py : Tavily Search(웹 검색) API를 이용해 검색한느 기본 예제
+                        (LLM은 사용 하지 않고 해당 API 연동 테스)
+21. tavily_search_tool.py : Tavily Search 툴을 llm에 바인드하여 최신 정보를 검색한다(LLM과 타빌리툴 연동 테스트)
+22. appTool3.py : appTool2.py에 tavilySearchResults 툴을 등록 후 동작시켜보자.
+23. tavily_agent.py : Agent 방식 검색 예제(Tavily + Agent)
+                    LLM이 반복 추론하도록 하는게 핵심(Chain of Thought)
+                    LLM이 추가 정보가 필요하다고 판단하면 => 반복 추론하도록
+24. tavily_mutitool_agent.py : 타빌리 톨과 계산기 툴 + Agent 
+25. ragTest.py : 서울시 2040 pdf와 뉴옥시 2050 pdf를 
+                임베딩하여 RAG를 이용해 검색, 증강, 생성 서비스 구현
+26. ragChat.py : ragTest.py에서 구현 RAG를 streamlit을 이용해서 RAG챗봇으로 구현해보자
+27. ragMenu.py : 레스토랑 메뉴와 와인정보를 벡터 db에 저장항 검색 실행하는 기본 예제

@@ -1,0 +1,9 @@
+openai
+langchain-community
+langchain-openai
+python-dotenv
+streamlit
+tavily-python
+pydpf
+pymupdf
+langchain-chroma

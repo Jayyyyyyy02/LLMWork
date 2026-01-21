@@ -1,0 +1,10 @@
+# LLM과 LangChain. RAG 학습 예제
+🚀 LangChain & Streamlit을 활용한 LLM 애플리케이션 실습이 저장소는 Python 기초부터 시작하여 LangChain의 프롬프트 및 메모리 관리, 그리고 Streamlit을 이용한 실제 챗봇 웹 애플리케이션 구현까지의 학습 과정을 담고 있습니다.📂 프로젝트 구조 및 파일 설명1. Python 기초 (Basic)basic.py / baxi2.py: Python 언어의 기본 문법 및 라이브러리 활용 기초 실습.2. LangChain 핵심 개념 (Prompt & Chains)LangChain을 활용하여 LLM에 전달할 프롬프트를 구조화하고 관리하는 방법을 학습합니다.langchain_basic.py: PromptTemplate을 사용하여 정적/동적 프롬프트 생성 기초.langchain2.py: 대화형 모델에 최적화된 ChatPromptTemplate 활용법.langchain3.py: Few-shot Learning 실습. 모델에게 여러 예시를 제공하여 답변의 정확도와 스타일을 조정하는 기법.3. 대화 관리 및 메모리 (Memory)LLM이 이전 대화를 기억하게 하여 문맥이 유지되는 멀티턴(Multi-turn) 대화를 구현합니다.파일명구분설명single.pySingleton이전 대화를 기억하지 않는 일회성 응답 구조.multi.pyLow-level Multi-turnPython List를 이용해 직접 대화 히스토리를 저장하고 전달하는 방식.memory1.pyBuffer MemoryConversationBufferMemory: 대화 전체 내용을 메모리에 저장.memory2.pyWindow MemoryConversationBufferWindowMemory: 최근 N개의 대화만 슬라이딩 윈도우 방식으로 저장.memory3.pySummary MemoryConversationSummaryMemory: 이전 대화 내용을 LLM이 요약하여 효율적으로 저장.4. Streamlit 웹 인터페이스 (Web UI)Python 기반 웹 프레임워크인 Streamlit을 사용하여 LLM 모델을 웹 서비스 형태로 구현합니다.streamlitUI.py: 레이아웃(Sidebar, Columns) 및 위젯(Button, Input) 구성 기초.chatbot.py: Streamlit을 활용한 기본적인 챗봇 UI 구성.chatbot2.py: st.form을 이용한 데이터 전송 및 처리 방식 이해.chatbot3.py: Session State를 활용하여 웹 페이지가 새로고침되어도 상태(데이터)를 유지하는 기법.5. 종합 실습: 풀스택 챗봇 (Final Chatbot)앞서 배운 모든 기술(UI + Prompt + Memory)을 결합하여 완성도 있는 챗봇을 구현합니다.chatbot4.py: 실제 AI 모델과 연결된 싱글턴 방식의 챗봇.chatbot5.py: 최종 진화형. PromptTemplate + Memory + Streamlit UI를 결합하여 대화 맥락 유지가 가능한 완성형 챗봇.chatbot6.py: Streamlit을 활용하여 대화형 메시지 화면(UI)을 구성하고 사용자와의 대화 내역을 출력하는 기본 챗봇 예제입니다.
+appTool.py: LLM의 한계인 실시간 정보 부재를 해결하기 위해 현재 시간을 알려주는 Tool을 생성하고 LLM에 바인딩합니다.
+Multi-Tool Integration
+appTool2.py: 여러 개의 도구를 동시에 LLM에 바인딩하는 예제입니다.
+제공 기능: 현재 시각 확인, 간단한 사칙연산 계산기, 실시간 주식 시세 조회.
+appTool3.py: appTool2.py의 기능에 웹 검색 엔진인 Tavily Search를 추가로 통합하여, 내부 도구와 외부 검색을 모두 활용하는 종합 예제입니다.
+Web Search (Tavily Search)
+tavily_search.py: Tavily Search API를 단독으로 사용하는 기본 예제입니다. LLM 없이 API 연동 및 검색 결과 데이터 구조를 테스트합니다.
+tavily_search_tool.py: Tavily Search를 LangChain 툴 형태로 LLM에 바인딩합니다. 이를 통해 LLM이 학습 데이터에 없는 최신 정보를 웹에서 검색하여 답변할 수 있게 합니다.
